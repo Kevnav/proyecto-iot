@@ -19,7 +19,7 @@ class Rest extends BaseController
 
     public function espPost(){
      if ($this->request->getPost()){ 
-            $model = new Dht11();
+            $model = new estacion();
             $data=[ 
                 'temperatura'=>$this->request->getVar('temperatura'),
                 'humedad'=>$this->request->getVar('humedad'),
@@ -30,5 +30,15 @@ class Rest extends BaseController
             return "201";
         }
             return "401"; 
+    }
+
+    public function getGoogleLine(){
+        $model = new estacion();
+        $data= $model->getGoogleLine();
+        echo json_encode($data);
+    }
+
+    public function googleLine(){
+        echo view('charts/google_line');
     }
 }

@@ -33,6 +33,9 @@ $routes->get('/', 'Home::index');
 $routes->get('api', 'Rest::index');
 $routes->get('listar', 'Rest::listar');
 $routes->post('esp', 'Rest::espPost');
+$routes->get('data-gl', 'Rest::getGoogleLine');
+$routes->get('data-gl', 'Rest::getGoogleLine');
+$routes->get('g-line', 'Rest::googleLine');
 
 /*
  * --------------------------------------------------------------------
